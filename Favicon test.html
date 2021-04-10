@@ -1,0 +1,24 @@
+<head>
+    <title>Favicon Testing</title>
+    <!-- References to switch -->
+    <link id="icon-a" rel="shortcut icon" type="image/png" href="http://icons.iconarchive.com/icons/icons8/windows-8/16/Numbers-1-icon.png" />
+    <link id="icon-b" rel="shortcut icon" type="image/png" href="http://icons.iconarchive.com/icons/icons8/windows-8/16/Numbers-1-icon.png" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        // Store your current icon
+        var current = 0;
+        var icons = ['http://icons.iconarchive.com/icons/icons8/windows-8/16/Numbers-1-icon.png', 'http://hakimuzunyol.orgfree.com/Tugce/assets/icons/twitter_23.png', 'https://upload.wikimedia.org/wikipedia/commons/5/5a/T-bane_3_icon.png'];
+        // Every 2 seconds, switch your icon
+        setInterval(function () {
+            // Determine the next icon
+            var icon = (++current % icons.length);
+            // Grab the URL to use
+            var url = icons[icon];
+            // Update your elements
+            document.getElementById('icon-a').href = url;
+            document.getElementById('icon-b').href = url;
+        }, 2000);
+    </script>
+</body>
